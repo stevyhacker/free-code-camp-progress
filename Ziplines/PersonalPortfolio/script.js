@@ -1,5 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $("h1").addClass("text-primary");
+    //just to test $("h1").addClass("text-primary");
 
 });

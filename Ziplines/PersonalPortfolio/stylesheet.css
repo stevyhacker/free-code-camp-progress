@@ -1,7 +1,11 @@
 body{
     padding-top: 50px;
+    font-family: "Ubuntu", sans-serif;
+}
+h1{
+    font-family: "Ubuntu Light", sans-serif;
 }
 
-.btn-social{
-    margin: 1%;
+.btn{
+    font-family: "Ubuntu Condensed", sans-serif;
 }

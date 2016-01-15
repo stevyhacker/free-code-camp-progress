@@ -25,9 +25,7 @@ p{
 }
 
 #centercontainer{
-    padding-left: 30%;
-    padding-right: 30%;
-
+    text-align: center;
 }
 
 .dark-primary-color    { background: #512DA8; }

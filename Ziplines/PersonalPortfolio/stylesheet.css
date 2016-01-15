@@ -1,6 +1,16 @@
 body{
     padding-top: 50px;
     font-family: "Ubuntu", sans-serif;
+    background-color: lightsalmon;
+}
+
+.navbar{
+    background-color: darkslateblue ;
+}
+
+.navbar  a{
+    color: #FFF !important;
+    /*bootstrap overrides colour otherwise*/
 }
 h1{
     font-family: "Ubuntu Light", sans-serif;
@@ -13,3 +23,19 @@ h1{
 p{
     font-size: medium;
 }
+
+#centercontainer{
+    padding-left: 30%;
+    padding-right: 30%;
+
+}
+
+.dark-primary-color    { background: #512DA8; }
+.default-primary-color { background: #673AB7; }
+.light-primary-color   { background: #D1C4E9; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FF5252; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+

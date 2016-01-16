@@ -1,5 +1,7 @@
+
 body{
     padding-top: 50px;
+    padding-bottom: 50px;
     font-family: "Ubuntu", sans-serif;
     background-color: #f0b660;
 }
@@ -9,7 +11,12 @@ body{
 }
 
 .navbar  a{
-    color: #FFF !important;
+    color: #fff !important;
+    /*bootstrap overrides colour otherwise*/
+}
+
+.navbar  a:hover{
+    background-color: #340c4a !important;
     /*bootstrap overrides colour otherwise*/
 }
 h1{
@@ -17,11 +24,14 @@ h1{
 }
 
 .btn{
-    font-family: "Ubuntu Condensed", sans-serif;
 }
 
 p{
     font-size: medium;
+}
+
+#home-menu-item{
+    background-color: #340c4a;
 }
 
 #centercontainer{

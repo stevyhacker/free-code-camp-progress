@@ -1,42 +1,56 @@
 
-body{
+body {
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: "Ubuntu", sans-serif;
     background-color: #f0b660;
 }
 
-.navbar{
+h1 {
+    font-family: "Ubuntu Light", sans-serif;
+}
+
+p {
+    font-size: medium;
+}
+
+.navbar {
     background-color: #4c4386;
 }
 
-.navbar  a{
+.navbar a {
     color: #fff !important;
     /*bootstrap overrides colour otherwise*/
 }
 
-.navbar  a:hover{
+.navbar a:hover {
     background-color: #340c4a !important;
     /*bootstrap overrides colour otherwise*/
 }
-h1{
-    font-family: "Ubuntu Light", sans-serif;
+
+.project-showcase-container {
+    padding: 1%;
 }
 
-.btn{
-}
-
-p{
-    font-size: medium;
-}
-
-#home-menu-item{
+#home-menu-item {
     background-color: #340c4a;
 }
 
-#centercontainer{
+#home-container {
+    padding: 2%;
     text-align: center;
 }
 
+#about-container {
+    padding: 2%;
+}
 
+#portfolio-container {
+    padding: 2%;
+    text-align: center;
+}
 
+#contact-container {
+    padding: 2%;
+    text-align: center;
+}

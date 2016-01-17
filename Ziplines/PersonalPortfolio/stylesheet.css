@@ -41,6 +41,10 @@ p {
     text-align: center;
 }
 
+.project-showcase-container:hover{
+    background-color: #4b1c96;
+}
+
 #projects-showcase-grid {
     text-align: center;
 }
@@ -49,21 +53,21 @@ p {
     background-color: #340c4a;
 }
 
-#home-container {
-    padding: 2.5%;
+#home {
+    padding: 3%;
     text-align: center;
 }
 
-#about-container {
-    padding: 2.5%;
+#about {
+    padding: 3%;
 }
 
-#portfolio-container {
-    padding: 2.5%;
+#portfolio {
+    padding: 3%;
     text-align: center;
 }
 
-#contact-container {
-    padding: 2.5%;
+#contact {
+    padding: 3%;
     text-align: center;
 }

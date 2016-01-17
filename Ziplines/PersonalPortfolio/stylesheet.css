@@ -1,5 +1,6 @@
 
 body {
+    position:relative;
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: "Ubuntu", sans-serif;
@@ -49,20 +50,20 @@ p {
 }
 
 #home-container {
-    padding: 2%;
+    padding: 2.5%;
     text-align: center;
 }
 
 #about-container {
-    padding: 2%;
+    padding: 2.5%;
 }
 
 #portfolio-container {
-    padding: 2%;
+    padding: 2.5%;
     text-align: center;
 }
 
 #contact-container {
-    padding: 2%;
+    padding: 2.5%;
     text-align: center;
 }

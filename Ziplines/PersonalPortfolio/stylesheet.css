@@ -30,9 +30,18 @@ p {
 
 .project-showcase-container {
     color: #fff;
-    padding: 1%;
+    padding: 3%;
+    margin-top: 1%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 2%;
     background-color: #8e1eff;
-    border-radius: 15%;
+    border-radius: 7%;
+    text-align: center;
+}
+
+#projects-showcase-grid {
+    text-align: center;
 }
 
 #home-menu-item {

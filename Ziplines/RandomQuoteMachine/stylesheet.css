@@ -1,5 +1,5 @@
 body {
-    background-color: lightyellow;
+    background-color: #fffd9a;
     text-align: center;
     font-family: "Dancing Script", cursive;
 }
@@ -10,8 +10,9 @@ h1 {
     font-size: 64px
 }
 
-p{
+p {
     font-size: 32px;
+    background-color: #ffc556;
 }
 
 button {

@@ -7,15 +7,30 @@ body {
 h1 {
     font-family: Dancing Script, cursive;
     text-align: center;
-    font-size: 64px
+    font-size: 64px;
 }
 
-p {
+.hint {
+    display:inline-block;
     font-size: 32px;
     background-color: #ffc556;
 }
 
+#quoteText{
+    padding-left:20% ;
+    padding-right: 20%;
+    font-size: 32px;
+    background-color: #ffc556;
+}
+
+#authorBookText{
+    font-size: 24px;
+    background-color: #ffc556;
+}
+
 button {
+    margin-left: 2%;
     background-color: #520014;
     border-radius: 10%;
+    display:inline-block;
 }

@@ -26,9 +26,21 @@ function getNewRandomQuote() {
             author: "George R.R. Martin",
             book: "A Game of Thrones",
             quote: "Bran thought about it. 'Can a man still be brave if he's afraid?' 'That is the only time a man can be brave,' his father told him."
+        },
+        {
+            author: "George R. R. Martin",
+            book: "A Dance with Dragons",
+            quote: "A reader lives a thousand lives before he dies, the man who never reads lives only one."
+        },
+        {
+            author: "J. R. R. Tolkien",
+            book: "The Lord of the Rings",
+            quote: "Not all those who wander are lost."
         }
     ];
 
-    document.getElementById("quoteText").innerHTML = "\"" + quotes[Math.floor(Math.random() * quotes.length)].quote + ".\"";
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById("quoteText").innerHTML = "\"" + randomQuote.quote + "\"";
+    document.getElementById("authorBookText").innerHTML =  randomQuote.author + ", " + randomQuote.book;
 
 }

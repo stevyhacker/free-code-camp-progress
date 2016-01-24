@@ -5,7 +5,8 @@
     <title>Epic Fantasy Quotes</title>
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet'
           type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Rancho|Eagle+Lake|Tillana&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rancho|Eagle+Lake|Tillana&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="stylesheet.css">
     <script src="script.js"></script>
 </head>
@@ -13,12 +14,16 @@
 <body>
 <h1><em style="color: #520014;">Epic </em> Fantasy Quotes</h1>
 <p class="hint">Press button to get an epic quote.</p>
-<button onclick="getNewRandomQuote()" type=button><img src="newquotebutton.png" width="64"
-                                                       height="64"></button>
+<button id="getQuoteButton" onclick="getNewRandomQuote()" type=button><img src="newquotebutton.png"
+                                                                           width="64"
+                                                                           height="64"></button>
 
 <p id="quoteText">"Quote placeholder"</p>
 <p id="authorBookText">"Author placeholder, book placeholder"</p>
 
+<script>
+    eventFire(document.getElementById('getQuoteButton'), 'click');
+</script>
 </body>
 
 </html>

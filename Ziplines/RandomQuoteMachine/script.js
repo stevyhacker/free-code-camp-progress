@@ -44,3 +44,13 @@ function getNewRandomQuote() {
     document.getElementById("authorBookText").innerHTML =  randomQuote.author + ", " + randomQuote.book;
 
 }
+
+function eventFire(el, etype){
+    if (el.fireEvent) {
+        el.fireEvent('on' + etype);
+    } else {
+        var evObj = document.createEvent('Events');
+        evObj.initEvent(etype, true, false);
+        el.dispatchEvent(evObj);
+    }
+}

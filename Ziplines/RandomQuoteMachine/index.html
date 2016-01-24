@@ -21,9 +21,24 @@
 <p id="quoteText">"Quote placeholder"</p>
 <p id="authorBookText">"Author placeholder, book placeholder"</p>
 
+<!--Twitter button-->
+<a href="https://twitter.com/intent/tweet?button_hashtag=EFQuotes?text=quote"
+   class="twitter-hashtag-button" data-size="large" data-related="stevyhacker">Tweet
+    #EFQuotes</a>
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');</script>
+
+
 <script>
     eventFire(document.getElementById('getQuoteButton'), 'click');
 </script>
-</body>
 
+</body>
 </html>

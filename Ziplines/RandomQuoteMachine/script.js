@@ -41,11 +41,21 @@ function getNewRandomQuote() {
 
     var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById("quoteText").innerHTML = "\"" + randomQuote.quote + "\"";
-    document.getElementById("authorBookText").innerHTML =  randomQuote.author + ", " + randomQuote.book;
+    document.getElementById("authorBookText").innerHTML = randomQuote.author + ", " + randomQuote.book;
+
+    setTweet();
 
 }
 
-function eventFire(el, etype){
+function setTweet() {
+    var tweetText = document.getElementById('quoteText').textContent + " #EFQuotes";
+    var twitterPost = "https://twitter.com/intent/tweet?text=" + tweetText;
+    var tweet = document.getElementById('twitter');
+
+    tweet.href = twitterPost;
+}
+
+function eventFire(el, etype) {
     if (el.fireEvent) {
         el.fireEvent('on' + etype);
     } else {

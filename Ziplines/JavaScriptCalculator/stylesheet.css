@@ -1,0 +1,26 @@
+body {
+    background-color: #69c1bd;
+    margin: 5%;
+    text-align: center;
+}
+
+#calculator-box {
+    background-color: darkcyan;
+}
+
+ul {
+    display: block;
+}
+
+.li {
+    color: #ffffff;
+    border: none;
+    border-radius: 10%;
+    background-color: #4b1c96;
+    font-size: 30px;
+    padding: 1%;
+}
+
+.row {
+    margin: 1%;
+}

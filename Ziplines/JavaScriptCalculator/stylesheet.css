@@ -4,15 +4,36 @@ body {
     text-align: center;
 }
 
+#title {
+    padding: 10px;
+    font-size: 45px;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    height: 250px;
+    background-color: lightgrey;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+#calculator-output {
+    border-radius: 5%;
+    background-color: #75d2ff;
+}
+
 #calculator-box {
     background-color: darkcyan;
 }
 
-ul {
-    display: block;
-}
-
-.li {
+.button {
     color: #ffffff;
     border: none;
     border-radius: 10%;

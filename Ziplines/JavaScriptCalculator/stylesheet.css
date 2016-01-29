@@ -9,23 +9,15 @@ body {
     font-size: 45px;
 }
 
-.flex-container {
+.flex-row {
     display: -webkit-flex;
     display: flex;
-    width: 400px;
-    height: 250px;
-    background-color: lightgrey;
-}
-
-.flex-item {
-    background-color: cornflowerblue;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 #calculator-output {
-    border-radius: 5%;
+    padding: 10px;
     background-color: #75d2ff;
 }
 
@@ -34,14 +26,13 @@ body {
 }
 
 .button {
+    width: 75px;
+    height: 75px;
+    margin: 10px;
     color: #ffffff;
     border: none;
     border-radius: 10%;
     background-color: #4b1c96;
     font-size: 30px;
     padding: 1%;
-}
-
-.row {
-    margin: 1%;
 }

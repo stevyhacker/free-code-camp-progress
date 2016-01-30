@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JS Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -15,40 +16,40 @@
     <div class="flex-row">
         <p id="title">JS Calculator</p>
     </div>
-    <div class="flex-row" id="calculator-output">
-        <form>0</form>
+    <div class="flex-row">
+        <p id="calculator-output">0</p>
     </div>
     <div class="button-container">
 
         <div class="flex-row" id="row1">
-            <button class="button flex-item">AC</button>
-            <button class="button flex-item">CE</button>
-            <button class="button flex-item">%</button>
-            <button class="button flex-item">/</button>
+            <button onclick="clickAC()" class="button flex-item">AC</button>
+            <button onclick="clickCE()" class="button flex-item">CE</button>
+            <button onclick="clickPercent()" class="button flex-item">%</button>
+            <button onclick="clickDivide()" class="button flex-item">/</button>
         </div>
         <div class="flex-row" id="row2">
-            <button class="button flex-item">7</button>
-            <button class="button flex-item">8</button>
-            <button class="button flex-item">9</button>
-            <button class="button flex-item">*</button>
+            <button onclick="enterSeven()" class="button flex-item">7</button>
+            <button onclick="enterEight()" class="button flex-item">8</button>
+            <button onclick="enterNine()" class="button flex-item">9</button>
+            <button onclick="clickMultiply()" class="button flex-item">*</button>
         </div>
         <div class="flex-row" id="row3">
-            <button class="button flex-item">4</button>
-            <button class="button flex-item">5</button>
-            <button class="button flex-item">6</button>
-            <button class="button flex-item">-</button>
+            <button onclick="enterFour()" class="button flex-item">4</button>
+            <button onclick="enterFive()" class="button flex-item">5</button>
+            <button onclick="enterSix()" class="button flex-item">6</button>
+            <button onclick="clickMinus()" class="button flex-item">-</button>
         </div>
         <div class="flex-row" id="row4">
-            <button class="button flex-item">1</button>
-            <button class="button flex-item">2</button>
-            <button class="button flex-item">3</button>
-            <button class="button flex-item">+</button>
+            <button onclick="enterOne()" class="button flex-item">1</button>
+            <button onclick="enterTwo()" class="button flex-item">2</button>
+            <button onclick="enterThree()" class="button flex-item">3</button>
+            <button onclick="clickPlus()" class="button flex-item">+</button>
         </div>
         <div class="flex-row" id="row5">
-            <button class="button flex-item">0</button>
-            <button class="button flex-item">.</button>
-            <button class="button flex-item">=</button>
-            <button class="button flex-item">√</button>
+            <button onclick="enterZero()" class="button flex-item">0</button>
+            <button onclick="clickPoint()" class="button flex-item">.</button>
+            <button onclick="clickEquals()" class="button flex-item">=</button>
+            <button onclick="clickSqrt()" class="button flex-item">√</button>
         </div>
 
     </div>

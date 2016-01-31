@@ -22,6 +22,10 @@ function clickPoint() {
     document.getElementById("calculator-output").textContent += ".";
 }
 
+function clickSqrt() {
+    document.getElementById("calculator-output").textContent += "√";
+}
+
 function enterOne() {
     if (document.getElementById("calculator-output").textContent == "0") {
         document.getElementById("calculator-output").textContent = "1";
@@ -111,4 +115,38 @@ function enterZero() {
 
 function clickAC() {
     document.getElementById("calculator-output").textContent = "0";
+}
+
+function clickCE() {
+    var output = document.getElementById("calculator-output").textContent;
+
+    //document.getElementById("calculator-output").textContent = output[output.length - 1];
+
+    if (output[output.length - 1] == "+" || output[output.length - 1] == "-" || output[output.length - 1] == "/" || output[output.length - 1] == "*" || output[output.length - 1] == "%" || output[output.length - 1] == "√" || output[output.length - 1] == ".") {
+        document.getElementById("calculator-output").textContent = output.slice(0, -1);
+    }
+
+    else {
+
+        var i = 1;
+        var breakActivated = false;
+        while (output[output.length - i] != "+" && output[output.length - i] != "-" && output[output.length - i] != "/" && output[output.length - i] != "*" && output[output.length - i] != "%" && output[output.length - i] != "√") {
+            //alert(output.slice(0, -i) + "last element= " + output[output.length - i]);
+            i++;
+            if (i >= output.length) {
+                document.getElementById("calculator-output").textContent = "0";
+                breakActivated = true;
+                break;
+            }
+        }
+        if (!breakActivated) {
+            document.getElementById("calculator-output").textContent = output.slice(0, -i+1);
+        }
+
+    }
+
+}
+
+function clickEquals() {
+    //TODO
 }

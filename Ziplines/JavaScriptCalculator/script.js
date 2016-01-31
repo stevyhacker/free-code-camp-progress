@@ -1,3 +1,27 @@
+function clickPlus() {
+    document.getElementById("calculator-output").textContent += "+";
+}
+
+function clickDivide() {
+    document.getElementById("calculator-output").textContent += "/";
+}
+
+function clickMultiply() {
+    document.getElementById("calculator-output").textContent += "*";
+}
+
+function clickMinus() {
+    document.getElementById("calculator-output").textContent += "-";
+}
+
+function clickPercent() {
+    document.getElementById("calculator-output").textContent += "%";
+}
+
+function clickPoint() {
+    document.getElementById("calculator-output").textContent += ".";
+}
+
 function enterOne() {
     if (document.getElementById("calculator-output").textContent == "0") {
         document.getElementById("calculator-output").textContent = "1";
@@ -86,5 +110,5 @@ function enterZero() {
 }
 
 function clickAC() {
-
+    document.getElementById("calculator-output").textContent = "0";
 }

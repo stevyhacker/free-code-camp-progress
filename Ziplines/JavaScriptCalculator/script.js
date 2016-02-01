@@ -120,14 +120,10 @@ function clickAC() {
 function clickCE() {
     var output = document.getElementById("calculator-output").textContent;
 
-    //document.getElementById("calculator-output").textContent = output[output.length - 1];
-
     if (output[output.length - 1] == "+" || output[output.length - 1] == "-" || output[output.length - 1] == "/" || output[output.length - 1] == "*" || output[output.length - 1] == "%" || output[output.length - 1] == "√" || output[output.length - 1] == ".") {
         document.getElementById("calculator-output").textContent = output.slice(0, -1);
     }
-
     else {
-
         var i = 1;
         var breakActivated = false;
         while (output[output.length - i] != "+" && output[output.length - i] != "-" && output[output.length - i] != "/" && output[output.length - i] != "*" && output[output.length - i] != "%" && output[output.length - i] != "√") {
@@ -140,13 +136,13 @@ function clickCE() {
             }
         }
         if (!breakActivated) {
-            document.getElementById("calculator-output").textContent = output.slice(0, -i+1);
+            document.getElementById("calculator-output").textContent = output.slice(0, -i + 1);
         }
-
     }
-
 }
 
 function clickEquals() {
-    //TODO
+    var output = document.getElementById("calculator-output").textContent;
+    document.getElementById("calculator-output").textContent = eval(output).toString();
+
 }

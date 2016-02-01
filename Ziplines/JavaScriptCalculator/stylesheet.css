@@ -1,7 +1,6 @@
 body {
     background-color: #69c1bd;
     margin: 5%;
-    text-align: center;
 }
 
 #title {
@@ -24,7 +23,12 @@ body {
 }
 
 #calculator-box {
+    text-align: center;
     background-color: darkcyan;
+    width:500px;
+    height: auto;
+    margin: auto;
+
 }
 
 .button {

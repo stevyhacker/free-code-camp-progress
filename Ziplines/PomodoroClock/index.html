@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Pomodoro</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="script.js"></script>
 </head>
 <body>
+
 <h1>Pomodoro Clock</h1>
+
+<div id="length-settings-container">
+    <div>
+        <p class="setting-description">Break length</p>
+        <p id="setting-minus-break">-</p>
+        <p class="length-setting" id="break-length">5</p>
+        <p id="setting-plus-break">+</p>
+    </div>
+
+    <div>
+        <p class="setting-description">Work length</p>
+        <p id="setting-minus-work">-</p>
+        <p class="length-setting" id="work-length">25</p>
+        <p id="setting-plus-work">+</p>
+    </div>
+
+</div>
+
+<div id="timer-container">
+    <p id="status-text">Work</p>
+    <p id="timer">25:00</p>
+</div>
+
 </body>
 </html>

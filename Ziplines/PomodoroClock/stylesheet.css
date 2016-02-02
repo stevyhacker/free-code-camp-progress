@@ -1,0 +1,27 @@
+body {
+    background-color: #4f0012;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Ubuntu Light", sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;;
+}
+
+#length-settings-container {
+    margin-bottom: 5%;
+}
+
+#timer-container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 120px;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    background-color: #9f9d38
+}
+

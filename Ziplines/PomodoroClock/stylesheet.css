@@ -15,6 +15,7 @@ h1 {
 
 #length-settings-container {
     margin-bottom: 5%;
+    font-size: 20px;
 }
 
 #length-settings-container div {
@@ -56,10 +57,20 @@ h1 {
     color: #3b3d3b;
 }
 
-#borderline{
+#borderline {
     margin: auto;
     width: 700px;
     padding: 30px;
     border: solid #ffc200;
 }
 
+.signs {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-size: 28px !important;
+}
+
+.length-setting {
+    font-size: 25px !important;
+}

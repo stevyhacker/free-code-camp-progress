@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Pomodoro</title>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="script.js"></script>
 </head>
@@ -16,9 +17,9 @@
         <div>
             <p class="setting-description">Break length</p>
             <div class="counter">
-                <p class="signs" id="setting-minus-break">-</p>
+                <button onclick="minusBreak()" class="signs" id="setting-minus-break">-</button>
                 <p class="length-setting" id="break-length">5</p>
-                <p class="signs" id="setting-plus-break">+</p>
+                <button onclick="plusBreak()" class="signs" id="setting-plus-break">+</button>
             </div>
 
         </div>
@@ -26,16 +27,16 @@
         <div>
             <p class="setting-description">Work length</p>
             <div class="counter">
-                <p class="signs" id="setting-minus-work">-</p>
+                <button onclick="minusWork(this)" class="signs" id="setting-minus-work">-</button>
                 <p class="length-setting" id="work-length">25</p>
-                <p class="signs" id="setting-plus-work">+</p>
+                <button onclick="plusWork()" class="signs" id="setting-plus-work">+</button>
             </div>
 
         </div>
 
     </div>
 
-    <div id="timer-container">
+    <div onclick="startTimer()" id="timer-container">
         <p id="status-text">Work</p>
         <p id="timer">25:00</p>
     </div>

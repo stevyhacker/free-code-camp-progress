@@ -8,18 +8,68 @@ function startTimer() {
     var secondsCounter = 60;
 
     workTime--;
-    var secondsInterval = setInterval(countSeconds, 1000);
+    var workInterval = setInterval(countSecondsWork, 1000);
+    var breakInterval;
 
-    function countSeconds() {
+    function countSecondsWork() {
         secondsCounter--;
         if (secondsCounter < 1) {
             workTime--;
-            document.getElementById("timer").innerHTML = workTime + ":" + secondsCounter;
-            secondsCounter = 59;
+            document.getElementById("timer").innerHTML = workTime + ":0" + secondsCounter;
+            if (workTime < 1) {
+                if (secondsCounter == 0) {
+                    document.getElementById("status-text").textContent = "Break!";
+
+                    workTime = document.getElementById("work-length").textContent;
+                    breakTime = document.getElementById("break-length").textContent;
+                    breakTime--;
+                    secondsCounter = 60;
+                    clearInterval(workInterval);
+                    breakInterval = setInterval(countSecondsBreak, 1000);
+                }
+            }
+            else {
+                secondsCounter = 60;
+            }
+        }
+        else if (secondsCounter < 10 && secondsCounter > 0) {
+            document.getElementById("timer").innerHTML = workTime + ":0" + secondsCounter;
         }
         else {
             document.getElementById("timer").innerHTML = workTime + ":" + secondsCounter;
         }
+
+
+    }
+
+
+    function countSecondsBreak() {
+        secondsCounter--;
+        if (secondsCounter < 1) {
+            workTime--;
+            document.getElementById("timer").innerHTML = breakTime + ":0" + secondsCounter;
+            if (breakTime < 1) {
+                if (secondsCounter == 0) {
+                    document.getElementById("status-text").textContent = "Work";
+                    workTime = document.getElementById("work-length").textContent;
+                    breakTime = document.getElementById("break-length").textContent;
+                    workTime--;
+                    secondsCounter = 60;
+                    clearInterval(breakInterval);
+                    workInterval = setInterval(countSecondsWork, 1000);
+                }
+            }
+            else {
+                secondsCounter = 60;
+            }
+        }
+        else if (secondsCounter < 10 && secondsCounter > 0) {
+            document.getElementById("timer").innerHTML = breakTime + ":0" + secondsCounter;
+        }
+        else {
+            document.getElementById("timer").innerHTML = breakTime + ":" + secondsCounter;
+        }
+
 
     }
 }

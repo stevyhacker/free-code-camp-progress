@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+    font-size: 25px;
+}
+
+h1{
+    padding-bottom: 75px;
+}
+#city {
+    font-style: normal;
+    text-align: center;
+    font-size: 40px;
+}

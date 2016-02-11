@@ -13,7 +13,7 @@ function getLocation() {
 
 
 function showPosition(position) {
-    alert("Latitude: " + position.coords.latitude + "  Longitude: " + position.coords.longitude);
+    //alert("Latitude: " + position.coords.latitude + "  Longitude: " + position.coords.longitude);
     getWeatherData(position.coords.latitude, position.coords.longitude);
 }
 
@@ -22,9 +22,9 @@ function getWeatherData(latitude, longitude) {
     url += "lat=" + latitude + "&lon=" + longitude;
     url += "&appid=" + openWeatherApiKey;
     $.getJSON(url, function (json) {
-
-        alert(JSON.stringify(json));
-        //$(".message").html(JSON.stringify(json));
+        //alert(JSON.stringify(json));
+        $('#city').html(json.name);
+        $('#temperature').html(json.main.temp);
 
     });
 }

@@ -1,5 +1,6 @@
 var openWeatherApiKey = "0046bebb8d990ce411fa52d91c85572c";
-
+//http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=44db6a862fba0b067b1930da0d769e98
+var temp;
 getLocation();
 
 function getLocation() {
@@ -25,9 +26,17 @@ function getWeatherData(latitude, longitude) {
         //alert(JSON.stringify(json));
         $('#city').html(json.name);
         $('#temperature').html(json.main.temp);
-
+        temp = json.main.temp;
     });
 }
 
+function unitConvert() {
+    if (document.getElementById("unit-convert").textContent == "Imperial units") {
+        $('#temperature').html(toCelsius(temp));
+        $('#unitconvert').html("Metric units");
+    }
+}
 
-//http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=44db6a862fba0b067b1930da0d769e98
+function toCelsius(f) {
+    return (5 / 9) * (f - 32);
+}

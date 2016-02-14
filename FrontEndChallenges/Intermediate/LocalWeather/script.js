@@ -21,22 +21,27 @@ function showPosition(position) {
 function getWeatherData(latitude, longitude) {
     var url = "http://api.openweathermap.org/data/2.5/weather?";
     url += "lat=" + latitude + "&lon=" + longitude;
+    url += "&units=imperial";
     url += "&appid=" + openWeatherApiKey;
     $.getJSON(url, function (json) {
         //alert(JSON.stringify(json));
         $('#city').html(json.name);
-        $('#temperature').html(json.main.temp);
+        $('#temperature').html(json.main.temp + " °F");
         temp = json.main.temp;
     });
 }
 
 function unitConvert() {
     if (document.getElementById("unit-convert").textContent == "Imperial units") {
-        $('#temperature').html(toCelsius(temp));
-        $('#unitconvert').html("Metric units");
+        $('#temperature').html(toCelsius(temp) + " °C");
+        $('#unit-convert').html("Metric units");
+    }
+    else {
+        $('#temperature').html(temp + " °F");
+        $('#unit-convert').html("Imperial units");
     }
 }
 
 function toCelsius(f) {
-    return (5 / 9) * (f - 32);
+    return Math.round(((5 / 9) * (f - 32)) * 100) / 100;
 }

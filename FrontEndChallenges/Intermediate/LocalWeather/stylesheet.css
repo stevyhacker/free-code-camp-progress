@@ -7,7 +7,7 @@ body{
 }
 
 h1{
-    padding-bottom: 75px;
+    padding-bottom: 35px;
 }
 #city {
     text-align: center;
@@ -15,7 +15,8 @@ h1{
 }
 
 #unit-convert{
-    margin-top: 30px;
+    font-style: oblique;
+    margin-top: 20px;
     padding: 10px;
     border: solid 2px #f04b00;
     background: #f0ae00;

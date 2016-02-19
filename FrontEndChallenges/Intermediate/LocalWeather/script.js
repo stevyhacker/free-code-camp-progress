@@ -25,6 +25,7 @@ function getWeatherData(latitude, longitude) {
     url += "&appid=" + openWeatherApiKey;
     $.getJSON(url, function (json) {
         //alert(JSON.stringify(json));
+        $('#icon').attr('src', 'http://openweathermap.org/img/w/' + json.weather[0].icon + ".png");
         $('#city').html(json.name);
         $('#temperature').html(json.main.temp + " °F");
         temp = json.main.temp;

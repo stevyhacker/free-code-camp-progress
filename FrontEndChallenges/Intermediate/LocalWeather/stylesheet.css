@@ -1,4 +1,4 @@
-body {
+body{
     background-color: #1ab7ea;
     text-align: center;
     font-size: 25px;
@@ -6,30 +6,30 @@ body {
     font-family: "Andale Mono", serif;
 }
 
-h1 {
-    padding-bottom: 75px;
+h1{
+    padding-bottom: 35px;
 }
-
 #city {
     text-align: center;
     font-size: 40px;
 }
 
-#unit-convert {
-    margin-top: 30px;
+#unit-convert{
+    font-style: oblique;
+    margin-top: 20px;
     padding: 10px;
     border: solid 2px #f04b00;
     background: #f0ae00;
 }
 
-#weather-box {
+#weather-box{
     background: #f0d52c;
     width: 600px;
     padding: 30px;
     margin: auto;
 }
 
-#temperature {
+#temperature{
     font-size: 40px;
 
 }

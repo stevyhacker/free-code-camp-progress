@@ -1,3 +1,16 @@
 body {
+    background-color: #69c1bd !important;
+    padding-top: 50px;
+    margin: auto;
     text-align: center;
+    font-family: Roboto, serif;
+}
+
+img {
+    padding: 10px;
+}
+
+.container {
+    padding: 20px;
+    background: #fff;
 }

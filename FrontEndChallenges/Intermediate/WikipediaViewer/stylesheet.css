@@ -24,5 +24,18 @@ a {
 }
 
 input {
+    padding: 5px;
+    border: none;
     background-color: #ffd185;
+}
+
+#query-field{
+    width: 260px;
+    margin: 20px 5px;
+}
+
+#submit-button {
+    padding: 10px 30px;
+    font-family: "Ubuntu Light", sans-serif;
+    color: #9e2a23;
 }

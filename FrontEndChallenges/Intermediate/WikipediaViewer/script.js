@@ -1,22 +1,20 @@
 function wikiSearch() {
 
     var query = document.getElementById("query-field").value;
-    //alert(query);
-    //https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json
+    var api = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=";
+    var cb = '&callback=JSON_CALLBACK';
 
-// Using XMLHttpRequest
-    xhr.setRequestHeader('Api-User-Agent', 'Example/1.0');
+    var url = api + query + cb;
+    //alert(url);
+    //$.getJSON(url, function (json) {
+    //        alert(JSON.stringify(json));
+    //    });
 
-// Using jQuery
-    $.ajax({
-        url: remoteUrlWithOrigin,
-        data: query,
-        dataType: 'json',
-        type: 'POST',
-        headers: {'Api-User-Agent': 'Example/1.0'},
-        success: function (data) {
-            // do something with data
-        }
-    });
+    $.getJSON(url, function() {
+            alert("success");
+        })
+        .success(function() { alert("second success"); })
+        .error(function() { alert("error"); })
+        .complete(function() { alert("complete"); });
 
 }

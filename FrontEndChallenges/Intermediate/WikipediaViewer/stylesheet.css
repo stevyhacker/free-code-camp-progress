@@ -43,12 +43,17 @@ input {
 }
 
 .item {
+    font-size: 20px;
     display: inline-block;
     margin: 5px;
     color: #9e2a23;
     background: #ffd185;
-    padding: 10px;
-    width: 20%;
+    padding: 8px;
+    width: 25%;
+}
+
+.description-text {
+    font-size: 14px;
 }
 
 #display {

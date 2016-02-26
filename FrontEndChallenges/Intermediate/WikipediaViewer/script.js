@@ -23,7 +23,7 @@ function wikiSearch() {
                 var text = results[page].extract;
                 var pagelink = wikilink + results[page].pageid;
 
-                html += '<div class="item">' + title + '</div><br> ';
+                html += '<a href="' + pagelink + '" >' + '<div class="item">' + title + '<br>' + '<p class="description-text" >' + text + '</p>' + '</div></a>  <br> ';
             });
 
             $('#display').html(html);

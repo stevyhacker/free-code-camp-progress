@@ -15,16 +15,18 @@ function wikiSearch() {
         url: link,
         type: "get",
         dataType: "JSONP",
-        success: function(data) {
+        success: function (data) {
             var results = data.query.pages;
             var pgs = Object.keys(results);
-            pgs.forEach(function(page) {
+            pgs.forEach(function (page) {
                 var title = results[page].title;
                 var text = results[page].extract;
                 var pagelink = wikilink + results[page].pageid;
-                alert(title);
 
+                html += '<div class="item">' + title + '</div><br> ';
             });
+
+            $('#display').html(html);
         }
     });
 }

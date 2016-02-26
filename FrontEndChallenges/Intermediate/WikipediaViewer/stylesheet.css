@@ -2,13 +2,13 @@ body {
     background-color: #9e2a23;
     color: #ffd185;
     font-family: "Ubuntu Light", sans-serif;
-    padding: 5%;
+    padding: 4%;
     text-align: center;
 }
 
 p {
     font-size: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 input {
@@ -16,7 +16,7 @@ input {
 }
 
 form {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 a {
@@ -40,4 +40,17 @@ input {
     padding: 10px 30px;
     font-family: "Ubuntu Light", sans-serif;
     color: #9e2a23;
+}
+
+.item {
+    display: inline-block;
+    margin: 5px;
+    color: #9e2a23;
+    background: #ffd185;
+    padding: 10px;
+    width: 20%;
+}
+
+#display {
+    margin-top: 20px;
 }

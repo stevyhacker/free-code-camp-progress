@@ -1,20 +1,30 @@
 function wikiSearch() {
 
     var query = document.getElementById("query-field").value;
-    var api = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=";
-    var cb = '&callback=JSON_CALLBACK';
+    var wiki_api = 'https://en.wikipedia.org/w/api.php';
 
-    var url = api + query + cb;
-    //alert(url);
-    //$.getJSON(url, function (json) {
-    //        alert(JSON.stringify(json));
-    //    });
+    var api = "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exlimit=max&format=json&exsentences=1&exintro=&explaintext=&generator=search&gsrlimit=10&gsrsearch=";
+    var wikilink = 'http://en.wikipedia.org/?curid=';
 
-    $.getJSON(url, function() {
-            alert("success");
-        })
-        .success(function() { alert("second success"); })
-        .error(function() { alert("error"); })
-        .complete(function() { alert("complete"); });
+    var link = api + query;
+    var html = "";
 
+    //alert(link);
+
+    $.ajax({
+        url: link,
+        type: "get",
+        dataType: "JSONP",
+        success: function(data) {
+            var results = data.query.pages;
+            var pgs = Object.keys(results);
+            pgs.forEach(function(page) {
+                var title = results[page].title;
+                var text = results[page].extract;
+                var pagelink = wikilink + results[page].pageid;
+                alert(title);
+
+            });
+        }
+    });
 }

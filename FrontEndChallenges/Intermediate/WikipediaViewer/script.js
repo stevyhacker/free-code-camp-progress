@@ -1,3 +1,13 @@
+$(document).ready(function () {
+//Enter button fix to stop refreshing the page
+    $("#query-field").keyup(function (event) {
+        if (event.keyCode == 13) {
+            $("#submit-button").click();
+        }
+    });
+});
+
+
 function wikiSearch() {
 
     var query = document.getElementById("query-field").value;

@@ -3,13 +3,42 @@
 //    console.log(data);
 //});
 
-
-var twichUsers = ["freecodecamp", "storbeck", "terakilobyte", "habathcx", "RobotCaleb", "thomasballinger", "noobs2ninjas", "beohoff"];
-
+var twitchUsers = ["freecodecamp", "storbeck", "terakilobyte", "habathcx", "RobotCaleb", "thomasballinger", "noobs2ninjas", "beohoff","MedryBW"];
 
 function getUserData(username) {
-    $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?callback=?', function (data) {
+    $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?callback=?' , function (data) {
         console.log(data);
         return data;
     });
 }
+
+function getAllUserData() {
+    var html = '';
+
+    twitchUsers.forEach(function (user) {
+
+        console.log("user: " + user);
+        var data = getUserData(user);
+        var status;
+        if(data.stream === null){
+            status = "offline";
+        }
+        else {
+            status = "online";
+        }
+
+
+        html+= user + ": " + status + " <br> ";
+
+
+    });
+
+    $('#users').html(html);
+
+}
+
+$(document).ready(function () {
+
+    getAllUserData();
+
+});

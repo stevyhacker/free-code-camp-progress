@@ -1,5 +1,16 @@
 body {
     font-family: "Ubuntu Light", sans-serif;
-    padding: 4%;
+    padding: 3%;
     text-align: center;
+}
+
+h2 {
+    padding-bottom: 30px;
+}
+
+.user {
+    margin: auto;
+    width: 20%;
+    background-color: #98ccff;
+    padding: 4px;
 }

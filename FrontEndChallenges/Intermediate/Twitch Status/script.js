@@ -18,7 +18,7 @@ function getUserData(username) {
             status = "online";
         }
         //$('#users').html(username + ": " + status + " <br> ");
-        html += username + ": " + status + " <br> ";
+        html += "<div class='user'> " + username + ": " + status + "</div> <br> ";
         $('#users').html(html);
 
     });

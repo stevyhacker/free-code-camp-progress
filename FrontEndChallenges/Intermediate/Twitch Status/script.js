@@ -11,14 +11,17 @@ function getUserData(username) {
     $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?callback=?', function (data) {
         console.log(data);
         var status;
+        var game = '';
+        var link = "http://www.twitch.tv/" + username;
         if (data.stream === null) {
             status = "offline";
         }
         else {
             status = "online";
+            game = data.stream.game;
         }
         //$('#users').html(username + ": " + status + " <br> ");
-        html += "<div class='user'> " + username + ": " + status + "</div> <br> ";
+        html += "<div class='user'> " + "<a href='" + link + "'>" + username + " </a> <br> " + status + " <br> " + game + "</div> <br> ";
         $('#users').html(html);
 
     });

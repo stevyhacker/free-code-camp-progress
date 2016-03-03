@@ -2,6 +2,9 @@ body {
     font-family: "Ubuntu Light", sans-serif;
     padding: 3%;
     text-align: center;
+    background-color: rgba(115, 26, 54, 0.56);
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
 h2 {
@@ -11,6 +14,12 @@ h2 {
 .user {
     margin: auto;
     width: 20%;
-    background-color: #98ccff;
+    background-color: #82a9d9;
     padding: 4px;
+}
+
+a {
+    font-size: 20px;
+    color: #000030;
+    text-decoration: none;
 }

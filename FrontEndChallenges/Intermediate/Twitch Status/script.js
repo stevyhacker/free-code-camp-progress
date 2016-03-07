@@ -13,15 +13,17 @@ function getUserData(username) {
         var status;
         var game = '';
         var link = "http://www.twitch.tv/" + username;
+        var image = 'http://dummyimage.com/80x80/ecf0e7/5c5457.jpg&text=0x3F';
         if (data.stream === null) {
             status = "offline";
         }
         else {
             status = "online";
             game = data.stream.game;
+            image = data.stream.channel.logo;
         }
         //$('#users').html(username + ": " + status + " <br> ");
-        html += "<div class='user'> " + "<a href='" + link + "'>" + username + " </a> <br> " + status + " <br> " + game + "</div> <br> ";
+        html += "<div class='user'> " + "<a href='" + link + "'>" + username + "  <br> <img src=" + image + " width='80px'/> <br/> " + status + " <br> " + game + "</a></div> <br> ";
         $('#users').html(html);
 
     });

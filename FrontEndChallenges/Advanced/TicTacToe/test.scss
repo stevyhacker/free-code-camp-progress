@@ -1,0 +1,34 @@
+$gamebg-color: #1ab7ea;
+$grid-item-border-color: #faee13;
+$grid-item-bg-color: #00faf0;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  background-color: $gamebg-color;
+  font-family: "Passion One", sans-serif;
+}
+
+#game-grid {
+  text-align: center;
+  margin: auto;
+  width: 3*64+60px;
+
+  .grid-item {
+    height: 64px;
+    width: 64px;
+    padding: 10px;
+    margin: 10px;
+    background-color: $grid-item-bg-color;
+    border: solid 2px $grid-item-border-color;
+    @include border-radius(10px);
+  }
+
+  color: $grid-item-border-color;
+
+}

@@ -40,3 +40,50 @@
 //         console.log(list[i]);
 //     }
 // });
+
+// task 6
+
+// var listFilesByExtensionModule = require('./listFilesByExtensionModule');
+// listFilesByExtensionModule(process.argv[2], process.argv[3], printResults);
+//
+// function printResults(err, data) {
+//     if (err) return console.error(err);
+//
+//     data.forEach(function (file) {
+//         console.log(file);
+//     })
+// }
+
+//task 7
+
+// var http = require('http');
+//
+// http.get(process.argv[2], dataCallback);
+//
+// function dataCallback(response) {
+//
+//     response.on("data", function (data) {
+//        console.log(data.toString());
+//     });
+//
+// }
+
+
+//task 8
+
+var http = require('http');
+
+http.get(process.argv[2], dataCallback);
+
+function dataCallback(response) {
+    var data = [];
+    response.on('data', function (chunk) {
+        data.push(chunk);
+    });
+    response.on('end', function () {
+        var result = data.join('');
+        console.log(result.length);
+        console.log(result);
+        return result
+    });
+}

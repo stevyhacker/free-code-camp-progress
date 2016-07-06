@@ -17,18 +17,25 @@ body {
 #game-grid {
   text-align: center;
   margin: auto;
-  width: 3*64+60px;
+  width: 3*80+80px;
+  color: $grid-item-border-color;
 
   .grid-item {
-    height: 64px;
-    width: 64px;
+    height: 80px;
+    width: 80px;
     padding: 10px;
     margin: 10px;
     background-color: $grid-item-bg-color;
     border: solid 2px $grid-item-border-color;
     @include border-radius(10px);
+
+    .item-tile {
+      font-size: 50px;
+      color: $gamebg-color;
+
+    }
+
   }
 
-  color: $grid-item-border-color;
 
 }
